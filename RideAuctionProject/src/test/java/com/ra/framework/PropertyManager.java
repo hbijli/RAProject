@@ -1,3 +1,16 @@
+/*************************************************
+ * PropertyManager.java
+ * Access to the property file through this class.
+ * 
+ * 
+ ************************************************/
+/************************************************
+ * Methods:
+ * getProperty()
+ * setProperty()
+ * 
+ ***********************************************/
+
 package com.ra.framework;
 
 import java.util.Properties;
