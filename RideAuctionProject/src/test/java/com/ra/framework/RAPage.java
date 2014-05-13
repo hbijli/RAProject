@@ -25,7 +25,9 @@
 package com.ra.framework;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class RAPage {
 	
@@ -36,6 +38,12 @@ public class RAPage {
 	//Constructor
 	public RAPage (WebDriver driver) {
 		this.driver = driver;
+		
+	}
+	
+	WebElement getElement(By elmLocator) {
+		
+		return driver.findElement(elmLocator);
 		
 	}
 	
