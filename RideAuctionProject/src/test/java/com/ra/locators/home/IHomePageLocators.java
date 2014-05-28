@@ -30,7 +30,7 @@ public interface IHomePageLocators {
 	By lnk_YOUTUBE			= By.id("youtube");
 	By lnk_BESTPRICEGUARANTEE = By.id("bpg");
 	By lnk_TWEET_7X7		= By.linkText("http://t.co/yBp8I8yOUX");
-	By lnk_TWITTER_URL		= By.xpath("//div[@id='overscroll']/div[3]/div[1]/div/div[2]/a[1]");
+	By lnk_TWITTER_URL		= By.cssSelector(".aiwidgetscss>div:first-of-type .tweetlink>a:first-child");
 	By lnk_TWEET_REPLY		= By.linkText("reply");
 	By lnk_RETWEET			= By.linkText("retweet");
 	By lnk_FAVORITE_TWEET	= By.linkText("favorite");
@@ -47,11 +47,10 @@ public interface IHomePageLocators {
 	By lnk_REGISTRATION		= By.linkText("Registration");
 	  
 	 // Social links
-	By lnk_FACEBOOK			= By.cssSelector(".center>div>a>img");
-	By lnk_GOOGLEPLUS		= By.xpath("//div[@class='center']/div/a[1]/img");
-	By lnk_TWITTER			= By.xpath("//div[@class='center']/div/a[2]/img");
-	By lnk_YELP				= By.xpath("//div[@class='center']/div/a[3]/img");
-	By lnk_BLOG				= By.xpath("//div[@class='center']/div/a[4]/img");
-	 
+	By lnk_FACEBOOK			= By.cssSelector(".center>div>a:first-child>img");
+	By lnk_GOOGLEPLUS		= By.cssSelector(".center>div>a:nth-child(2)>img");
+	By lnk_TWITTER			= By.cssSelector(".center>div>a:nth-child(3)>img");
+	By lnk_YELP				= By.cssSelector(".center>div>a:nth-child(4)>img");
+	By lnk_BLOG				= By.cssSelector(".center>div>a:last-child>img");
 
 }
