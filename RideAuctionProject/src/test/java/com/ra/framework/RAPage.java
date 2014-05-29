@@ -19,7 +19,7 @@
  * void verifyElementEnabled(elmLocator)
  * void verifyTextPresent(elmLocator, value)
  * void checkCheckBoxElement(elmLocator)
- * 
+ * void verifyPageElements();
  * 
  *********************************/
 package com.ra.framework;
@@ -32,7 +32,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import static org.testng.Assert.*;
 
-public class RAPage {
+public abstract class RAPage {
 	
 	Logger logger = Logger.getLogger(RAPage.class);
 	
@@ -63,7 +63,6 @@ public class RAPage {
 		else
 			return false;
 	}
-	
 	
 	public void type (By elmLocator, String value) {
 		WebElement elm = getElement(elmLocator);	
@@ -135,5 +134,7 @@ public class RAPage {
 		assertTrue(elm.isSelected());
 		 
 	 }
+	
+	public abstract void verifyPageElements();
 
 }
